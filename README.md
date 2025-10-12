@@ -1,25 +1,37 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/aM4vVoua)
-# java-oop-assignment1
-“Java OOP assignment starter project  and UML practice.”
+#Overloading (تعدد الدوال):
 
-## 🎯 Objective
-Practice key OOP concepts in Java by:
-- Calculating distance between locations.
-- Drawing UML diagrams for class hierarchies.
+هو وجود أكثر من دالة بنفس الاسم داخل نفس الكلاس، لكن تختلف في عدد أو نوع المعاملات.
+يُستخدم لتوفير أكثر من طريقة لتنفيذ نفس الوظيفة.
 
----
+#المثال في الكود:
 
-## 🧮 Part 1 – Location Distance
-Edit the `Main.java` file and:
-1. Replace `myLocation` coordinates with **your current location**.
-2. Run the code to calculate distance to **IT College.
-3. Identify where **overloading** and **overriding** occur in the code and explain the difference below.
+public double distance(SimpleLocation other) { ... }
+public double distance(double lat, double lon) { ... }
 
-**Answer:**
-> _Write your explanation here..._
+هذا يمثل Overloading لأن الدالتين لهما نفس الاسم distance ولكن معاملات مختلفة.
 
----
 
-## 🎨 Part 2 – UML Diagram
-Draw the UML diagram using drwa.io or lucidchart for the Shape example (Shape → Circle → Movable, Adjustable.)  
+#Overriding (إعادة التعريف):
 
+هو إعادة تعريف دالة موروثة من كلاس الأب لتؤدي وظيفة جديدة تناسب الكلاس الحالي.
+يُستخدم لتغيير سلوك الدالة الأصلية.
+
+#المثال في الكود:
+
+@Override
+public String toString() {
+    return "SimpleLocation{" + "latitude=" + latitude + ", longitude=" + longitude + '}';
+}
+
+هذا يمثل Overriding لأننا أعدنا تعريف toString() من الكلاس الأب Object.
+
+
+# الفرق بين Overloading و Overriding:
+
+في Overloading: الدوال تكون داخل نفس الكلاس، وتختلف في عدد أو نوع المعاملات.
+
+في Overriding: الدالة تكون في كلاس الابن، وتكون بنفس الاسم والمعاملات لكن تُغيّر السلوك.
+
+هدف Overloading هو تنويع طرق تنفيذ نفس الفكرة.
+
+هدف Overriding هو تعديل سلوك دالة موروثة لتناسب الكلاس الحالي.
