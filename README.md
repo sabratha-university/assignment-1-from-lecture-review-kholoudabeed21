@@ -37,4 +37,3 @@ public String toString() {
 هدف Overloading هو تنويع طرق تنفيذ نفس الفكرة.
 
 هدف Overriding هو تعديل سلوك دالة موروثة لتناسب الكلاس الحالd .
-..
